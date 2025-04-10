@@ -119,7 +119,7 @@ struct MenuBar: View {
                         .font(.caption)
                         .foregroundColor(.secondary)
                 
-                    Link("View Source Code", destination: URL(string: "https://github.com/lospi/mac-motion-cues")!)
+                    Link("View Source Code", destination: URL(string: "https://github.com/Lospi/MacMotionCues")!)
                         .font(.caption)
                 }
             }
