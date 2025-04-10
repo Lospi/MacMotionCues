@@ -1,32 +1,80 @@
-//
-//  Mac_Motion_CuesApp.swift
-//  Mac Motion Cues
-//
-//  Created by Roberto Camargo on 21/11/24.
-//
-
+import AppKit
+import Combine
 import SwiftUI
-import SwiftData
 
 @main
-struct Mac_Motion_CuesApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+struct MacMotionCuesApp: App {
+    // Use StateObject for view models that should persist
+    var dotsViewModel = DotsViewModel.shared
+    var motionViewModel = MotionViewModel.shared
+    
+    // App-wide settings
+    @AppStorage("appEnabled") private var appEnabled: Bool = true
+    
     var body: some Scene {
+        // Only show the window when app is enabled
         WindowGroup {
-            ContentView()
+            if appEnabled && motionViewModel.isMotionEnabled {
+                DotsView(dotsViewModel: dotsViewModel, motionViewModel: motionViewModel)
+                    .background(TransparentWindow())
+            } else {
+                // Empty view when disabled
+                VStack {}
+                    .background(TransparentWindow())
+            }
         }
-        .modelContainer(sharedModelContainer)
+        .windowStyle(.hiddenTitleBar)
+        
+        // Enhanced menu bar with more options
+        MenuBarExtra("Motion Cues", systemImage: "cursorarrow.motionlines.click") {
+            MenuBar(dotsViewModel: dotsViewModel, motionViewModel: motionViewModel)
+        }
+        .menuBarExtraStyle(.window)
     }
+}
+
+class TransparentWindowView: NSView {
+    override func viewDidMoveToWindow() {
+        guard let window = window else { return }
+        
+        // Configure window properties
+        window.backgroundColor = .clear
+        window.isOpaque = false
+        
+        // Use .floating to stay above standard windows but below full-screen apps
+        window.level = .floating
+        
+        // Critical: Make the entire window completely click-through
+        window.ignoresMouseEvents = true
+        
+        // Ensure no interaction with window
+        window.isMovableByWindowBackground = false
+        window.hasShadow = false
+        
+        // Hide title bar elements
+        window.titleVisibility = .hidden
+        window.titlebarAppearsTransparent = true
+        window.styleMask.insert(.fullSizeContentView)
+        window.styleMask.insert(.borderless)
+        
+        // Hide standard window buttons
+        window.standardWindowButton(.closeButton)?.isHidden = true
+        window.standardWindowButton(.miniaturizeButton)?.isHidden = true
+        window.standardWindowButton(.zoomButton)?.isHidden = true
+        
+        // Make it screen size
+        if let mainScreen = NSScreen.main {
+            window.setFrame(mainScreen.frame, display: true)
+        }
+        
+        super.viewDidMoveToWindow()
+    }
+    
+    // No need for hit testing since we're ignoring all mouse events
+}
+
+// Fix the typo in the struct name
+struct TransparentWindow: NSViewRepresentable {
+    func updateNSView(_ nsView: NSView, context: Context) {}
+    func makeNSView(context: Self.Context) -> NSView { return TransparentWindowView() }
 }
