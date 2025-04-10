@@ -1,5 +1,6 @@
 import AppKit
 import Combine
+import Sparkle
 import SwiftUI
 
 @main
@@ -7,9 +8,15 @@ struct MacMotionCuesApp: App {
     // Use StateObject for view models that should persist
     var dotsViewModel = DotsViewModel.shared
     var motionViewModel = MotionViewModel.shared
-    
+    private let updaterController: SPUStandardUpdaterController
     // App-wide settings
     @AppStorage("appEnabled") private var appEnabled: Bool = true
+    
+    init() {
+        // If you want to start the updater manually, pass false to startingUpdater and call .startUpdater() later
+        // This is where you can also pass an updater delegate if you need one
+        updaterController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
+    }
     
     var body: some Scene {
         // Only show the window when app is enabled
@@ -24,6 +31,11 @@ struct MacMotionCuesApp: App {
             }
         }
         .windowStyle(.hiddenTitleBar)
+        .commands {
+            CommandGroup(after: .appInfo) {
+                CheckForUpdatesView(updater: updaterController.updater)
+            }
+        }
         
         // Enhanced menu bar with more options
         MenuBarExtra("Motion Cues", systemImage: "cursorarrow.motionlines.click") {

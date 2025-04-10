@@ -31,6 +31,16 @@
         }
       }
     },
+    "Check for Updates…" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verificar por atualizações..."
+          }
+        }
+      }
+    },
     "Disable Motion" : {
       "localizations" : {
         "pt-BR" : {
@@ -67,6 +77,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Habilitar Movimento Horizontal (BETA)"
+          }
+        }
+      }
+    },
+    "Launch at Login" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir ao Iniciar"
           }
         }
       }

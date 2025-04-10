@@ -9,26 +9,44 @@
 /* Begin PBXBuildFile section */
 		0799051B2DA74DBD0029D42F /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 0799051A2DA74DBD0029D42F /* Sparkle */; };
 		0799051D2DA85F6B0029D42F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0799051C2DA85F6B0029D42F /* Localizable.xcstrings */; };
+		0799052F2DA860F00029D42F /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905202DA860F00029D42F /* Dot.swift */; };
+		079905302DA860F00029D42F /* DotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905242DA860F00029D42F /* DotsView.swift */; };
+		079905312DA860F00029D42F /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905252DA860F00029D42F /* MenuBar.swift */; };
+		079905322DA860F00029D42F /* DotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905272DA860F00029D42F /* DotsViewModel.swift */; };
+		079905332DA860F00029D42F /* MotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905282DA860F00029D42F /* MotionViewModel.swift */; };
+		079905342DA860F00029D42F /* Mac_Motion_CuesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799052D2DA860F00029D42F /* Mac_Motion_CuesApp.swift */; };
+		079905352DA860F00029D42F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 079905222DA860F00029D42F /* Preview Assets.xcassets */; };
+		079905362DA860F00029D42F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0799052A2DA860F00029D42F /* Assets.xcassets */; };
+		079905372DA860F00029D42F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0799052B2DA860F00029D42F /* Localizable.xcstrings */; };
+		0799053A2DA860FE0029D42F /* SparkleUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905392DA860FA0029D42F /* SparkleUpdater.swift */; };
+		0799053E2DA862BB0029D42F /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0799053D2DA862BB0029D42F /* LaunchAtLogin */; };
+		079905422DA8658A0029D42F /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905412DA865880029D42F /* UpdateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0799051C2DA85F6B0029D42F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = "Mac Motion Cues/Localizable.xcstrings"; sourceTree = "<group>"; };
+		079905202DA860F00029D42F /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
+		079905222DA860F00029D42F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		079905242DA860F00029D42F /* DotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsView.swift; sourceTree = "<group>"; };
+		079905252DA860F00029D42F /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		079905272DA860F00029D42F /* DotsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsViewModel.swift; sourceTree = "<group>"; };
+		079905282DA860F00029D42F /* MotionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionViewModel.swift; sourceTree = "<group>"; };
+		0799052A2DA860F00029D42F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0799052B2DA860F00029D42F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		0799052C2DA860F00029D42F /* Mac_Motion_Cues.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mac_Motion_Cues.entitlements; sourceTree = "<group>"; };
+		0799052D2DA860F00029D42F /* Mac_Motion_CuesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mac_Motion_CuesApp.swift; sourceTree = "<group>"; };
+		079905392DA860FA0029D42F /* SparkleUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleUpdater.swift; sourceTree = "<group>"; };
+		0799053B2DA8620D0029D42F /* Mac-Motion-Cues-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Mac-Motion-Cues-Info.plist"; sourceTree = SOURCE_ROOT; };
+		079905412DA865880029D42F /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 		07AEFBDD2CF00D44001A9095 /* Mac Motion Cues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Motion Cues.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		07AEFBDF2CF00D44001A9095 /* Mac Motion Cues */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Mac Motion Cues";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		07AEFBDA2CF00D44001A9095 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0799053E2DA862BB0029D42F /* LaunchAtLogin in Frameworks */,
 				0799051B2DA74DBD0029D42F /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,11 +54,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		079905212DA860F00029D42F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				079905202DA860F00029D42F /* Dot.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		079905232DA860F00029D42F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				079905222DA860F00029D42F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		079905262DA860F00029D42F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				079905242DA860F00029D42F /* DotsView.swift */,
+				079905252DA860F00029D42F /* MenuBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		079905292DA860F00029D42F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				079905272DA860F00029D42F /* DotsViewModel.swift */,
+				079905282DA860F00029D42F /* MotionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0799052E2DA860F00029D42F /* Mac Motion Cues */ = {
+			isa = PBXGroup;
+			children = (
+				0799053B2DA8620D0029D42F /* Mac-Motion-Cues-Info.plist */,
+				079905382DA860F30029D42F /* Sparkle */,
+				079905212DA860F00029D42F /* Model */,
+				079905232DA860F00029D42F /* Preview Content */,
+				079905262DA860F00029D42F /* View */,
+				079905292DA860F00029D42F /* ViewModel */,
+				0799052A2DA860F00029D42F /* Assets.xcassets */,
+				0799052B2DA860F00029D42F /* Localizable.xcstrings */,
+				0799052C2DA860F00029D42F /* Mac_Motion_Cues.entitlements */,
+				0799052D2DA860F00029D42F /* Mac_Motion_CuesApp.swift */,
+			);
+			path = "Mac Motion Cues";
+			sourceTree = "<group>";
+		};
+		079905382DA860F30029D42F /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				079905412DA865880029D42F /* UpdateView.swift */,
+				079905392DA860FA0029D42F /* SparkleUpdater.swift */,
+			);
+			path = Sparkle;
+			sourceTree = "<group>";
+		};
 		07AEFBD42CF00D44001A9095 = {
 			isa = PBXGroup;
 			children = (
 				0799051C2DA85F6B0029D42F /* Localizable.xcstrings */,
-				07AEFBDF2CF00D44001A9095 /* Mac Motion Cues */,
+				0799052E2DA860F00029D42F /* Mac Motion Cues */,
 				07AEFBDE2CF00D44001A9095 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,12 +146,10 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				07AEFBDF2CF00D44001A9095 /* Mac Motion Cues */,
-			);
 			name = "Mac Motion Cues";
 			packageProductDependencies = (
 				0799051A2DA74DBD0029D42F /* Sparkle */,
+				0799053D2DA862BB0029D42F /* LaunchAtLogin */,
 			);
 			productName = "Mac Motion Cues";
 			productReference = 07AEFBDD2CF00D44001A9095 /* Mac Motion Cues.app */;
@@ -106,6 +182,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				079905192DA74DBD0029D42F /* XCRemoteSwiftPackageReference "Sparkle" */,
+				0799053C2DA862BB0029D42F /* XCRemoteSwiftPackageReference "LaunchAtLogin-modern" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 07AEFBDE2CF00D44001A9095 /* Products */;
@@ -122,6 +199,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079905352DA860F00029D42F /* Preview Assets.xcassets in Resources */,
+				079905362DA860F00029D42F /* Assets.xcassets in Resources */,
+				079905372DA860F00029D42F /* Localizable.xcstrings in Resources */,
 				0799051D2DA85F6B0029D42F /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0799052F2DA860F00029D42F /* Dot.swift in Sources */,
+				079905422DA8658A0029D42F /* UpdateView.swift in Sources */,
+				079905302DA860F00029D42F /* DotsView.swift in Sources */,
+				079905312DA860F00029D42F /* MenuBar.swift in Sources */,
+				0799053A2DA860FE0029D42F /* SparkleUpdater.swift in Sources */,
+				079905322DA860F00029D42F /* DotsViewModel.swift in Sources */,
+				079905332DA860F00029D42F /* MotionViewModel.swift in Sources */,
+				079905342DA860F00029D42F /* Mac_Motion_CuesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +365,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mac-Motion-Cues-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mac Motion Cues";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_LSUIElement = YES;
@@ -309,6 +398,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mac-Motion-Cues-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mac Motion Cues";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_LSUIElement = YES;
@@ -359,6 +449,14 @@
 				minimumVersion = 2.7.0;
 			};
 		};
+		0799053C2DA862BB0029D42F /* XCRemoteSwiftPackageReference "LaunchAtLogin-modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -366,6 +464,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 079905192DA74DBD0029D42F /* XCRemoteSwiftPackageReference "Sparkle" */;
 			productName = Sparkle;
+		};
+		0799053D2DA862BB0029D42F /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0799053C2DA862BB0029D42F /* XCRemoteSwiftPackageReference "LaunchAtLogin-modern" */;
+			productName = LaunchAtLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

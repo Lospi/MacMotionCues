@@ -1,9 +1,10 @@
+import LaunchAtLogin
+import Sparkle
 import SwiftUI
 
 struct MenuBar: View {
     @Bindable var dotsViewModel: DotsViewModel
     @Bindable var motionViewModel: MotionViewModel
-    
     @AppStorage("appEnabled") private var appEnabled: Bool = true
     
     var body: some View {
@@ -127,6 +128,11 @@ struct MenuBar: View {
         
             Divider()
         
+            LaunchAtLogin.Toggle {
+                Text("Launch at Login")
+            }
+            UpdateView()
+                
             Button("Quit Mac Motion Cues") {
                 NSApplication.shared.terminate(nil)
             }
