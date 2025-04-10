@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Mac Motion Cues</title>
+        <item>
+            <title>0.1</title>
+            <pubDate>Thu, 10 Apr 2025 19:07:53 -0300</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>0.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/Lospi/OuterSpaces/releases/download/v0.1/OuterSpaces.dmg" length="2924326" type="application/octet-stream" sparkle:edSignature="xDsrA8YLeuQJ0Tl/2HiMz+/2dpXHGdE/VbA+aNMLlCyBkWq2EBtwE9+k0ce/ijaDQgEFyNjSdLxtmm6qkuNnCg=="/>
+        </item>
+    </channel>
+</rss>
