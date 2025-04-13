@@ -32,6 +32,13 @@ Mac Motion Cues is a macOS app that enables motion cue dots on your screen to he
 Download the latest release from [this Github repository Releases page](https://github.com/Lospi/MacMotionCues/releases).
 Just drag the .app to the Application folder using the .dmg file.
 
+## How to Use
+
+* Open the app on the menu bar
+* Enable Motion Cues
+* Connect your AirPods (if not yet connected)
+* Click on Enable Motion
+
 ## Permission Request
 
 Outer Spaces requires permission for: Motion and Fitness. Make sure to enable both permissions within Privacy and Security on your macOS settings.
