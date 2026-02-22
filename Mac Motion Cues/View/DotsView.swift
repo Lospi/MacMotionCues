@@ -29,6 +29,9 @@ struct DotsView: View {
                 .onAppear {
                     dotsViewModel.initializeDots(screenHeight: geometry.size.height)
                 }
+                .onDisappear {
+                    motionViewModel.stopDeviceMotion()
+                }
             }
         }
     }
