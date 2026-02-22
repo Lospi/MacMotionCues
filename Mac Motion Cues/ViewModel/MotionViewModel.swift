@@ -1,4 +1,3 @@
-import Combine
 import CoreMotion
 
 @Observable
@@ -13,8 +12,6 @@ class MotionViewModel {
     
     private var motion = CMHeadphoneMotionManager()
     private var motionQueue = OperationQueue()
-    private var cancellables = Set<AnyCancellable>()
-    
     init() {
         motionQueue.name = "MotionQueue"
         motionQueue.qualityOfService = .userInteractive
@@ -50,6 +47,5 @@ class MotionViewModel {
     
     deinit {
         stopDeviceMotion()
-        cancellables.forEach { $0.cancel() }
     }
 }
