@@ -1,17 +1,15 @@
-import Combine
 import SwiftUI
 
 struct DotsView: View {
     @Bindable var dotsViewModel: DotsViewModel
     @Bindable var motionViewModel: MotionViewModel
 
-    @State private var scrollingCancellable: AnyCancellable?
-
     var body: some View {
         GeometryReader { geometry in
             TimelineView(.animation(minimumInterval: 1 / 30, paused: !motionViewModel.isMotionEnabled)) { context in
                 ZStack {
-                    ForEach(Array(dotsViewModel.dots.enumerated()), id: \.element.id) { index, dot in
+                    ForEach(dotsViewModel.dots.indices, id: \.self) { index in
+                        let dot = dotsViewModel.dots[index]
                         Circle()
                             .fill(.black)
                             .frame(width: dot.size, height: dot.size)
@@ -30,9 +28,6 @@ struct DotsView: View {
                 }
                 .onAppear {
                     dotsViewModel.initializeDots(screenHeight: geometry.size.height)
-                }
-                .onDisappear {
-                    scrollingCancellable?.cancel()
                 }
             }
         }
