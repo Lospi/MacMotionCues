@@ -23,8 +23,6 @@ struct DotsView: View {
                             )
                             .opacity(dot.offsetY < dotsViewModel.dotSize ||
                                 dot.offsetY > geometry.size.height - 150 ? 0 : 1)
-                            .animation(.easeInOut(duration: 0.06), value: dot.offsetY)
-                            .animation(.easeInOut(duration: 0.06), value: dot.offsetX)
                     }
                 }
                 .onChange(of: context.date) {
