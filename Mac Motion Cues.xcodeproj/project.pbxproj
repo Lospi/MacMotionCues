@@ -21,6 +21,8 @@
 		0799053A2DA860FE0029D42F /* SparkleUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905392DA860FA0029D42F /* SparkleUpdater.swift */; };
 		0799053E2DA862BB0029D42F /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0799053D2DA862BB0029D42F /* LaunchAtLogin */; };
 		079905422DA8658A0029D42F /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905412DA865880029D42F /* UpdateView.swift */; };
+		0799FE012E0000000029D42F /* OverlayWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799FE022E0000000029D42F /* OverlayWindowController.swift */; };
+		0799FE032E0000000029D42F /* DotsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799FE042E0000000029D42F /* DotsSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		079905392DA860FA0029D42F /* SparkleUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleUpdater.swift; sourceTree = "<group>"; };
 		0799053B2DA8620D0029D42F /* Mac-Motion-Cues-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Mac-Motion-Cues-Info.plist"; sourceTree = SOURCE_ROOT; };
 		079905412DA865880029D42F /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
+		0799FE022E0000000029D42F /* OverlayWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindowController.swift; sourceTree = "<group>"; };
+		0799FE042E0000000029D42F /* DotsSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsSettings.swift; sourceTree = "<group>"; };
 		07AEFBDD2CF00D44001A9095 /* Mac Motion Cues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Motion Cues.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +79,7 @@
 			children = (
 				079905242DA860F00029D42F /* DotsView.swift */,
 				079905252DA860F00029D42F /* MenuBar.swift */,
+				0799FE022E0000000029D42F /* OverlayWindowController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			children = (
 				079905272DA860F00029D42F /* DotsViewModel.swift */,
 				079905282DA860F00029D42F /* MotionViewModel.swift */,
+				0799FE042E0000000029D42F /* DotsSettings.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -221,6 +227,8 @@
 				079905322DA860F00029D42F /* DotsViewModel.swift in Sources */,
 				079905332DA860F00029D42F /* MotionViewModel.swift in Sources */,
 				079905342DA860F00029D42F /* Mac_Motion_CuesApp.swift in Sources */,
+				0799FE012E0000000029D42F /* OverlayWindowController.swift in Sources */,
+				0799FE032E0000000029D42F /* DotsSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

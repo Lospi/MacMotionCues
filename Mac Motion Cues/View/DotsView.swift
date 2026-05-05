@@ -51,7 +51,7 @@ struct DotsView: View {
                                 : geometry.size.width - 150 + dot.offsetX,
                             y: dot.offsetY
                         )
-                        .opacity(dot.offsetY < dotsViewModel.dotSize ||
+                        .opacity(dot.offsetY < DotsSettings.shared.dotSize ||
                             dot.offsetY > geometry.size.height - 150 ? 0 : 1)
                     }
                 }
@@ -61,8 +61,8 @@ struct DotsView: View {
                 .onAppear {
                     dotsViewModel.initializeDots(screenHeight: geometry.size.height)
                 }
-                .onDisappear {
-                    motionViewModel.stopDeviceMotion()
+                .onChange(of: geometry.size.height) {
+                    dotsViewModel.initializeDots(screenHeight: geometry.size.height)
                 }
             }
         }
