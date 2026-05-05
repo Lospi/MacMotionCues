@@ -6,6 +6,8 @@ struct MenuBar: View {
     @Bindable var dotsViewModel: DotsViewModel
     @Bindable var motionViewModel: MotionViewModel
     @AppStorage("appEnabled") private var appEnabled: Bool = true
+    @AppStorage("dotStyle") private var dotStyle: DotStyle = .dynamic
+    @AppStorage("haloStyle") private var haloStyle: HaloStyle = .dynamic
     
     var body: some View {
         VStack(alignment: .center, spacing: 15) {
@@ -54,9 +56,43 @@ struct MenuBar: View {
                     }
                 }
                 .padding(.horizontal)
-                
+
                 Divider()
-                
+
+                GroupBox {
+                    Text("Dot Style")
+                        .font(.subheadline)
+                        .padding(.bottom, 5)
+
+                    VStack(alignment: .leading, spacing: 10) {
+                        HStack {
+                            Text("Style")
+                                .frame(width: 50, alignment: .leading)
+                            Picker("Style", selection: $dotStyle) {
+                                Text("Solid").tag(DotStyle.solid)
+                                Text("Dynamic").tag(DotStyle.dynamic)
+                            }
+                            .pickerStyle(.segmented)
+                            .labelsHidden()
+                        }
+
+                        HStack {
+                            Text("Halo")
+                                .frame(width: 50, alignment: .leading)
+                            Picker("Halo", selection: $haloStyle) {
+                                Text("Off").tag(HaloStyle.off)
+                                Text("Solid").tag(HaloStyle.solid)
+                                Text("Dynamic").tag(HaloStyle.dynamic)
+                            }
+                            .pickerStyle(.segmented)
+                            .labelsHidden()
+                        }
+                    }
+                }
+                .padding(.horizontal)
+
+                Divider()
+
                 GroupBox {
                     Text("Motion Settings")
                         .font(.subheadline)

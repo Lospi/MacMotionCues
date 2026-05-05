@@ -51,6 +51,26 @@
         }
       }
     },
+    "Dot Style" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estilo do Ponto"
+          }
+        }
+      }
+    },
+    "Dynamic" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dinâmico"
+          }
+        }
+      }
+    },
     "Enable Motion" : {
       "localizations" : {
         "pt-BR" : {
@@ -77,6 +97,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Habilitar Movimento Horizontal (BETA)"
+          }
+        }
+      }
+    },
+    "Halo" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Halo"
           }
         }
       }
@@ -121,6 +151,16 @@
         }
       }
     },
+    "Off" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desligado"
+          }
+        }
+      }
+    },
     "Quit Mac Motion Cues" : {
       "localizations" : {
         "pt-BR" : {
@@ -151,6 +191,16 @@
         }
       }
     },
+    "Solid" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sólido"
+          }
+        }
+      }
+    },
     "Spacing" : {
       "localizations" : {
         "pt-BR" : {
@@ -160,6 +210,19 @@
           }
         }
       }
+    },
+    "Style" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estilo"
+          }
+        }
+      }
+    },
+    "Style" : {
+
     },
     "View Source Code" : {
       "localizations" : {
