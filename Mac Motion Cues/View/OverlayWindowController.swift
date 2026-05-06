@@ -40,12 +40,6 @@ final class OverlayWindowController {
         }
     }
 
-    func notifySettingsChanged() {
-        for entry in entries.values {
-            entry.viewModel.updateSpacing()
-        }
-    }
-
     private func sync() {
         var current: [CGDirectDisplayID: NSScreen] = [:]
         for screen in NSScreen.screens {

@@ -8,7 +8,21 @@ class DotsViewModel {
     private var screenHeight: CGFloat = 200
     private var lastUpdateTime: TimeInterval = CACurrentMediaTime()
 
-    init() {}
+    init() {
+        observeSpacingSettings()
+    }
+
+    private func observeSpacingSettings() {
+        withObservationTracking {
+            _ = DotsSettings.shared.verticalSpacing
+            _ = DotsSettings.shared.dotSize
+        } onChange: { [weak self] in
+            Task { @MainActor in
+                self?.updateSpacing()
+                self?.observeSpacingSettings()
+            }
+        }
+    }
 
     func initializeDots(screenHeight: CGFloat) {
         self.screenHeight = screenHeight

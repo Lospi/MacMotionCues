@@ -16,7 +16,14 @@ enum HaloStyle: String, CaseIterable {
 final class DotsSettings {
     static let shared = DotsSettings()
 
-    var dotSize: CGFloat            { didSet { defaults.set(Double(dotSize), forKey: Keys.dotSize) } }
+    var dotSize: CGFloat {
+        didSet {
+            defaults.set(Double(dotSize), forKey: Keys.dotSize)
+            if verticalSpacing < dotSize * 1.5 {
+                verticalSpacing = dotSize * 1.5
+            }
+        }
+    }
     var verticalSpacing: CGFloat    { didSet { defaults.set(Double(verticalSpacing), forKey: Keys.verticalSpacing) } }
     var motionSensitivity: CGFloat  { didSet { defaults.set(Double(motionSensitivity), forKey: Keys.motionSensitivity) } }
     var xMotionEnabled: Bool        { didSet { defaults.set(xMotionEnabled, forKey: Keys.xMotionEnabled) } }
@@ -53,9 +60,4 @@ final class DotsSettings {
         haloStyle = HaloStyle(rawValue: defaults.string(forKey: Keys.haloStyle) ?? "") ?? .dynamic
     }
 
-    func ensureSpacingFitsSize() {
-        if verticalSpacing < dotSize * 1.5 {
-            verticalSpacing = dotSize * 1.5
-        }
-    }
 }

@@ -5,7 +5,6 @@ import SwiftUI
 struct MenuBar: View {
     @Bindable var motionViewModel: MotionViewModel
     @Bindable var settings: DotsSettings
-    let overlay: OverlayWindowController
     @AppStorage("appEnabled") private var appEnabled: Bool = true
 
     var body: some View {
@@ -30,10 +29,6 @@ struct MenuBar: View {
                         HStack {
                             Text("Size")
                             Slider(value: $settings.dotSize, in: 10...30, step: 1)
-                                .onChange(of: settings.dotSize) {
-                                    settings.ensureSpacingFitsSize()
-                                    overlay.notifySettingsChanged()
-                                }
                             Text("\(Int(settings.dotSize))")
                                 .frame(width: 40, alignment: .trailing)
                                 .monospacedDigit()
@@ -46,9 +41,6 @@ struct MenuBar: View {
                                 in: 20...100,
                                 step: 5
                             )
-                            .onChange(of: settings.verticalSpacing) {
-                                overlay.notifySettingsChanged()
-                            }
                             Text("\(Int(settings.verticalSpacing))")
                                 .frame(width: 40, alignment: .trailing)
                                 .monospacedDigit()

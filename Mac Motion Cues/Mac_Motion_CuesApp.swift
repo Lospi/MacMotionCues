@@ -21,28 +21,27 @@ struct MacMotionCuesApp: App {
         MenuBarExtra("Motion Cues", systemImage: "cursorarrow.motionlines.click") {
             MenuBar(
                 motionViewModel: motionViewModel,
-                settings: DotsSettings.shared,
-                overlay: overlay
+                settings: DotsSettings.shared
             )
-            .task { syncOverlay() }
-            .onChange(of: appEnabled) { syncOverlay() }
-            .onChange(of: motionViewModel.isMotionEnabled) { syncOverlay() }
+            .task { syncOverlayMounting() }
+            .onChange(of: appEnabled) { _, newValue in
+                if !newValue && motionViewModel.isMotionEnabled {
+                    motionViewModel.stopDeviceMotion()
+                }
+                syncOverlayMounting()
+            }
+            .onChange(of: motionViewModel.isMotionEnabled) { syncOverlayMounting() }
         }
         .menuBarExtraStyle(.window)
 
         Settings { EmptyView() }
     }
 
-    private func syncOverlay() {
+    private func syncOverlayMounting() {
         if appEnabled && motionViewModel.isMotionEnabled {
             overlay.install()
         } else {
             overlay.uninstall()
-            // If the user disabled visual cues while motion was running,
-            // stop the motion manager too so AirPods aren't read for nothing.
-            if !appEnabled && motionViewModel.isMotionEnabled {
-                motionViewModel.stopDeviceMotion()
-            }
         }
     }
 }
