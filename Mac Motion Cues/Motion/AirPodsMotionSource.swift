@@ -1,30 +1,24 @@
 import AppKit
 import CoreMotion
 import Foundation
-
-enum MotionState: Equatable {
-    case permissionNotDetermined
-    case permissionDenied
-    case noAirPods
-    case connecting
-    case streaming
-    case stale
-}
+import Observation
 
 @Observable
-final class MotionViewModel: NSObject, CMHeadphoneMotionManagerDelegate {
-    static let shared = MotionViewModel()
+final class AirPodsMotionSource: NSObject, MotionSource, CMHeadphoneMotionManagerDelegate {
+    static let id = "airpods"
+    static let displayName = "AirPods"
+    static let hardwareAvailability = HardwareAvailability.airpods
+    static let defaultPriority = 100
 
-    var state: MotionState = .permissionNotDetermined
-    var motionX: Double = 0.0
-    var motionY: Double = 0.0
+    static let shared = AirPodsMotionSource()
 
-    var isStreaming: Bool { state == .streaming }
+    private(set) var state: MotionSourceState = .permissionNotDetermined
+    private(set) var latestSample: VehicleMotionSample?
 
     private let motion = CMHeadphoneMotionManager()
     private let motionQueue: OperationQueue = {
         let q = OperationQueue()
-        q.name = "MotionQueue"
+        q.name = "AirPodsMotionQueue"
         q.qualityOfService = .userInteractive
         return q
     }()
@@ -41,14 +35,20 @@ final class MotionViewModel: NSObject, CMHeadphoneMotionManagerDelegate {
         applyAuthorizationStatus()
     }
 
+    func teardown() {
+        motion.stopDeviceMotionUpdates()
+        cancelStaleTimer()
+        if state == .streaming || state == .connecting || state == .stale {
+            transition(to: .idle)
+        }
+    }
+
     func requestPermission() {
         // First call to startDeviceMotionUpdates triggers the OS prompt when
-        // status is .notDetermined. The sample handler resolves the next
-        // state once the user accepts/denies.
+        // status is .notDetermined. The handler resolves the next state.
         motion.startDeviceMotionUpdates(to: motionQueue) { [weak self] sample, error in
-            guard let self else { return }
             DispatchQueue.main.async {
-                self.handleStreamCallback(sample: sample, error: error)
+                self?.handleStreamCallback(sample: sample, error: error)
             }
         }
     }
@@ -72,15 +72,13 @@ final class MotionViewModel: NSObject, CMHeadphoneMotionManagerDelegate {
         case .authorized:
             motion.startConnectionStatusUpdates()
             startSampleStream()
-            // `.connecting` is reserved for the delegate `didConnect` event
-            // (i.e. the brief gap between AirPods physically connecting and
-            // the first sample arriving). Default to `.noAirPods` here and
-            // let real signals; delegate callbacks or sample arrivals;
-            // drive forward transitions. Don't clobber an active state if
-            // bootstrap re-runs (e.g. when the menu is reopened).
+            // `.connecting` is reserved for the delegate `didConnect` event.
+            // Default to `.idle` (authorized but no AirPods) here and let real
+            // signals; delegate callbacks or sample arrivals; drive forward
+            // transitions. Don't clobber an active state if bootstrap re-runs.
             switch state {
-            case .permissionNotDetermined, .permissionDenied:
-                transition(to: .noAirPods)
+            case .permissionNotDetermined, .permissionDenied, .unavailable:
+                transition(to: .idle)
             default:
                 break
             }
@@ -99,15 +97,12 @@ final class MotionViewModel: NSObject, CMHeadphoneMotionManagerDelegate {
         if status == .notDetermined {
             return
         }
-        // Authorized from here on.
         motion.startConnectionStatusUpdates()
         if let sample {
             ingestSample(sample)
         } else if error != nil {
-            // No sample yet; assume AirPods aren't actively streaming.
-            // Delegate `didConnect` or a future sample will promote us forward.
             if state == .permissionNotDetermined || state == .permissionDenied {
-                transition(to: .noAirPods)
+                transition(to: .idle)
             }
         }
     }
@@ -115,38 +110,48 @@ final class MotionViewModel: NSObject, CMHeadphoneMotionManagerDelegate {
     private func startSampleStream() {
         guard !motion.isDeviceMotionActive else { return }
         motion.startDeviceMotionUpdates(to: motionQueue) { [weak self] sample, error in
-            guard let self else { return }
             DispatchQueue.main.async {
+                guard let self else { return }
                 if let sample {
                     self.ingestSample(sample)
                 } else if let error {
-                    print("Motion error: \(error.localizedDescription)")
+                    print("AirPods motion error: \(error.localizedDescription)")
                 }
             }
         }
     }
 
     private func ingestSample(_ sample: CMDeviceMotion) {
-        // Flip state BEFORE writing motion values so observers see .streaming
-        // before any consumer reads the new motion data; preserves the
-        // "isMotionEnabled before first paint" ordering invariant.
+        // Flip state BEFORE writing the sample so observers see `.streaming`
+        // before any consumer reads `latestSample`; preserves the
+        // "active source streaming before first paint" invariant.
         if state != .streaming {
             transition(to: .streaming)
         }
-        motionX = sample.userAcceleration.x
-        motionY = sample.userAcceleration.y
+        latestSample = VehicleMotionSample(
+            lateralAccel: sample.userAcceleration.x,
+            longitudinalAccel: sample.userAcceleration.y,
+            // rotationRate.z is the head's yaw angular velocity (rad/s);
+            // a direct signal for sustained turning, vs. integrating noisy
+            // lateral accel.
+            yawRate: sample.rotationRate.z,
+            confidence: 1.0,
+            timestamp: sample.timestamp
+        )
         resetStaleTimer()
     }
 
-    private func transition(to next: MotionState) {
+    private func transition(to next: MotionSourceState) {
         guard state != next else { return }
         state = next
         if next != .streaming {
             cancelStaleTimer()
         }
-        if next == .noAirPods || next == .permissionDenied || next == .permissionNotDetermined {
-            motionX = 0
-            motionY = 0
+        switch next {
+        case .idle, .permissionDenied, .permissionNotDetermined, .unavailable:
+            latestSample = nil
+        default:
+            break
         }
     }
 
@@ -173,7 +178,7 @@ final class MotionViewModel: NSObject, CMHeadphoneMotionManagerDelegate {
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
             guard CMHeadphoneMotionManager.authorizationStatus() == .authorized else { return }
-            if self.state == .noAirPods {
+            if self.state == .idle {
                 self.transition(to: .connecting)
                 self.startSampleStream()
             }
@@ -185,7 +190,7 @@ final class MotionViewModel: NSObject, CMHeadphoneMotionManagerDelegate {
             guard let self else { return }
             self.motion.stopDeviceMotionUpdates()
             if CMHeadphoneMotionManager.authorizationStatus() == .authorized {
-                self.transition(to: .noAirPods)
+                self.transition(to: .idle)
             }
         }
     }

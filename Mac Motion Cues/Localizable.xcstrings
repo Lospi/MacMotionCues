@@ -21,6 +21,17 @@
         }
       }
     },
+    "AirPods" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AirPods"
+          }
+        }
+      }
+    },
     "AirPods connected" : {
       "localizations" : {
         "pt-BR" : {
@@ -37,6 +48,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "AirPods entraram em modo de espera"
+          }
+        }
+      }
+    },
+    "Asking for location permission…" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solicitando permissão de localização…"
+          }
+        }
+      }
+    },
+    "Auto-enable when in vehicle" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ativar automaticamente em veículos"
           }
         }
       }
@@ -131,12 +162,43 @@
         }
       }
     },
+    "In vehicle" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em veículo"
+          }
+        }
+      }
+    },
     "Launch at Login" : {
       "localizations" : {
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abrir ao Iniciar"
+          }
+        }
+      }
+    },
+    "Location access denied" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acesso à localização negado"
+          }
+        }
+      }
+    },
+    "Location services" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serviços de localização"
           }
         }
       }
@@ -162,6 +224,7 @@
       }
     },
     "Mac Motion Cues uses AirPods head-tracking to drive cue motion." : {
+      "extractionState" : "stale",
       "localizations" : {
         "pt-BR" : {
           "stringUnit" : {
@@ -232,6 +295,7 @@
       }
     },
     "Put on your AirPods" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pt-BR" : {
           "stringUnit" : {
@@ -257,6 +321,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sensibilidade"
+          }
+        }
+      }
+    },
+    "Setting up…" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configurando…"
           }
         }
       }
@@ -291,12 +365,32 @@
         }
       }
     },
+    "Stationary" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parado"
+          }
+        }
+      }
+    },
     "Style" : {
       "localizations" : {
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estilo"
+          }
+        }
+      }
+    },
+    "Uses AirPods head-tracking to drive cue motion." : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa o rastreamento de movimento dos AirPods para gerar os indicadores."
           }
         }
       }

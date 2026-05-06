@@ -69,13 +69,14 @@ class DotsViewModel {
     }
 
     func updateDotsPosition() {
-        guard MotionViewModel.shared.isStreaming else { return }
+        guard let sample = MotionPipeline.shared.latestSample,
+              MotionPipeline.shared.isStreaming else { return }
 
         let settings = DotsSettings.shared
         let fixedDeltaTime: CGFloat = 1.0 / 60.0
 
-        let motionX = CGFloat(MotionViewModel.shared.motionX)
-        let motionY = CGFloat(MotionViewModel.shared.motionY)
+        let motionX = CGFloat(sample.lateralAccel)
+        let motionY = CGFloat(sample.longitudinalAccel)
 
         let isXMotionRelevant = abs(motionX) > 0.02
         let isYMotionRelevant = abs(motionY) > 0.02

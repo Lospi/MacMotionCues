@@ -3,7 +3,7 @@ import SwiftUI
 
 struct DotsView: View {
     @Bindable var dotsViewModel: DotsViewModel
-    @Bindable var motionViewModel: MotionViewModel
+    @Bindable var pipeline: MotionPipeline
 
     private let haloLineWidth: CGFloat = 1.5
     private let haloGap: CGFloat = 1.0
@@ -11,7 +11,7 @@ struct DotsView: View {
     var body: some View {
         let settings = DotsSettings.shared
         GeometryReader { geometry in
-            TimelineView(.animation(minimumInterval: 1 / 30, paused: !motionViewModel.isStreaming)) { context in
+            TimelineView(.animation(minimumInterval: 1 / 30, paused: !pipeline.isStreaming)) { context in
                 ZStack {
                     ForEach(dotsViewModel.dots.indices, id: \.self) { index in
                         let dot = dotsViewModel.dots[index]

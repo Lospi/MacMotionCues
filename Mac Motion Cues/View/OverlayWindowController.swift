@@ -13,27 +13,26 @@ final class OverlayWindowController {
     private(set) var isInstalled = false
 
     /// Drives `install()`/`uninstall()` reactively from `appState.appEnabled`
-    /// and `motionViewModel.state`, independent of any view's lifecycle.
+    /// and `pipeline.shouldRenderCues`, independent of any view's lifecycle.
     /// Call once at app launch; re-arms itself after each mutation.
-    func startObservingMountConditions(appState: AppState, motionViewModel: MotionViewModel) {
-        observeMountConditions(appState: appState, motionViewModel: motionViewModel)
+    func startObservingMountConditions(appState: AppState, pipeline: MotionPipeline) {
+        observeMountConditions(appState: appState, pipeline: pipeline)
     }
 
-    private func observeMountConditions(appState: AppState, motionViewModel: MotionViewModel) {
+    private func observeMountConditions(appState: AppState, pipeline: MotionPipeline) {
         withObservationTracking {
-            _ = appState.appEnabled
-            _ = motionViewModel.state
+            _ = pipeline.shouldRenderCues(appEnabled: appState.appEnabled)
         } onChange: { [weak self] in
             Task { @MainActor in
-                self?.applyMountState(appState: appState, motionViewModel: motionViewModel)
-                self?.observeMountConditions(appState: appState, motionViewModel: motionViewModel)
+                self?.applyMountState(appState: appState, pipeline: pipeline)
+                self?.observeMountConditions(appState: appState, pipeline: pipeline)
             }
         }
-        applyMountState(appState: appState, motionViewModel: motionViewModel)
+        applyMountState(appState: appState, pipeline: pipeline)
     }
 
-    private func applyMountState(appState: AppState, motionViewModel: MotionViewModel) {
-        if appState.appEnabled && motionViewModel.state == .streaming {
+    private func applyMountState(appState: AppState, pipeline: MotionPipeline) {
+        if pipeline.shouldRenderCues(appEnabled: appState.appEnabled) {
             install()
         } else {
             uninstall()
@@ -121,7 +120,7 @@ final class OverlayWindowController {
         let host = NSHostingView(
             rootView: DotsView(
                 dotsViewModel: viewModel,
-                motionViewModel: MotionViewModel.shared
+                pipeline: MotionPipeline.shared
             )
         )
         host.frame = NSRect(origin: .zero, size: screen.frame.size)

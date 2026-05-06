@@ -13,7 +13,6 @@
 		079905302DA860F00029D42F /* DotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905242DA860F00029D42F /* DotsView.swift */; };
 		079905312DA860F00029D42F /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905252DA860F00029D42F /* MenuBar.swift */; };
 		079905322DA860F00029D42F /* DotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905272DA860F00029D42F /* DotsViewModel.swift */; };
-		079905332DA860F00029D42F /* MotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905282DA860F00029D42F /* MotionViewModel.swift */; };
 		079905342DA860F00029D42F /* Mac_Motion_CuesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799052D2DA860F00029D42F /* Mac_Motion_CuesApp.swift */; };
 		079905352DA860F00029D42F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 079905222DA860F00029D42F /* Preview Assets.xcassets */; };
 		079905362DA860F00029D42F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0799052A2DA860F00029D42F /* Assets.xcassets */; };
@@ -24,6 +23,10 @@
 		0799FE012E0000000029D42F /* OverlayWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799FE022E0000000029D42F /* OverlayWindowController.swift */; };
 		0799FE032E0000000029D42F /* DotsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799FE042E0000000029D42F /* DotsSettings.swift */; };
 		0799FE052E0000000029D42F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799FE062E0000000029D42F /* AppState.swift */; };
+		0799FE072E0000000029D42F /* MotionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799FE082E0000000029D42F /* MotionSource.swift */; };
+		0799FE092E0000000029D42F /* AirPodsMotionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799FE0A2E0000000029D42F /* AirPodsMotionSource.swift */; };
+		0799FE0C2E0000000029D42F /* MotionPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799FE0D2E0000000029D42F /* MotionPipeline.swift */; };
+		0799FE0E2E0000000029D42F /* CoreLocationDetectionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799FE0F2E0000000029D42F /* CoreLocationDetectionSource.swift */; };
 		7C06465E2FAB608C000B6D48 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7C06465D2FAB608C000B6D48 /* InfoPlist.xcstrings */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +37,6 @@
 		079905242DA860F00029D42F /* DotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsView.swift; sourceTree = "<group>"; };
 		079905252DA860F00029D42F /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		079905272DA860F00029D42F /* DotsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsViewModel.swift; sourceTree = "<group>"; };
-		079905282DA860F00029D42F /* MotionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionViewModel.swift; sourceTree = "<group>"; };
 		0799052A2DA860F00029D42F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0799052B2DA860F00029D42F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		0799052C2DA860F00029D42F /* Mac_Motion_Cues.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mac_Motion_Cues.entitlements; sourceTree = "<group>"; };
@@ -45,6 +47,10 @@
 		0799FE022E0000000029D42F /* OverlayWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindowController.swift; sourceTree = "<group>"; };
 		0799FE042E0000000029D42F /* DotsSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsSettings.swift; sourceTree = "<group>"; };
 		0799FE062E0000000029D42F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		0799FE082E0000000029D42F /* MotionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSource.swift; sourceTree = "<group>"; };
+		0799FE0A2E0000000029D42F /* AirPodsMotionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPodsMotionSource.swift; sourceTree = "<group>"; };
+		0799FE0D2E0000000029D42F /* MotionPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPipeline.swift; sourceTree = "<group>"; };
+		0799FE0F2E0000000029D42F /* CoreLocationDetectionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationDetectionSource.swift; sourceTree = "<group>"; };
 		07AEFBDD2CF00D44001A9095 /* Mac Motion Cues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Motion Cues.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C06465D2FAB608C000B6D48 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,11 +98,21 @@
 			isa = PBXGroup;
 			children = (
 				079905272DA860F00029D42F /* DotsViewModel.swift */,
-				079905282DA860F00029D42F /* MotionViewModel.swift */,
 				0799FE042E0000000029D42F /* DotsSettings.swift */,
 				0799FE062E0000000029D42F /* AppState.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0799FE0B2E0000000029D42F /* Motion */ = {
+			isa = PBXGroup;
+			children = (
+				0799FE082E0000000029D42F /* MotionSource.swift */,
+				0799FE0A2E0000000029D42F /* AirPodsMotionSource.swift */,
+				0799FE0F2E0000000029D42F /* CoreLocationDetectionSource.swift */,
+				0799FE0D2E0000000029D42F /* MotionPipeline.swift */,
+			);
+			path = Motion;
 			sourceTree = "<group>";
 		};
 		0799052E2DA860F00029D42F /* Mac Motion Cues */ = {
@@ -108,6 +124,7 @@
 				079905232DA860F00029D42F /* Preview Content */,
 				079905262DA860F00029D42F /* View */,
 				079905292DA860F00029D42F /* ViewModel */,
+				0799FE0B2E0000000029D42F /* Motion */,
 				0799052A2DA860F00029D42F /* Assets.xcassets */,
 				0799052B2DA860F00029D42F /* Localizable.xcstrings */,
 				0799052C2DA860F00029D42F /* Mac_Motion_Cues.entitlements */,
@@ -232,11 +249,14 @@
 				079905312DA860F00029D42F /* MenuBar.swift in Sources */,
 				0799053A2DA860FE0029D42F /* SparkleUpdater.swift in Sources */,
 				079905322DA860F00029D42F /* DotsViewModel.swift in Sources */,
-				079905332DA860F00029D42F /* MotionViewModel.swift in Sources */,
 				079905342DA860F00029D42F /* Mac_Motion_CuesApp.swift in Sources */,
 				0799FE012E0000000029D42F /* OverlayWindowController.swift in Sources */,
 				0799FE032E0000000029D42F /* DotsSettings.swift in Sources */,
 				0799FE052E0000000029D42F /* AppState.swift in Sources */,
+				0799FE072E0000000029D42F /* MotionSource.swift in Sources */,
+				0799FE092E0000000029D42F /* AirPodsMotionSource.swift in Sources */,
+				0799FE0C2E0000000029D42F /* MotionPipeline.swift in Sources */,
+				0799FE0E2E0000000029D42F /* CoreLocationDetectionSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,11 +402,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mac-Motion-Cues-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Mac Motion Cues";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_LSUIElement = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMotionUsageDescription = "This app uses device motion to better calculate motion cues";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
