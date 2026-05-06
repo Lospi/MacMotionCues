@@ -23,9 +23,12 @@
 
 Mac Motion Cues is a macOS app that enables motion cue dots on your screen to help with motion sickness!
 
+> Unlike Apple's built-in Motion Cues, this app also works on **macOS Sequoia (15)** and **M1 MacBooks**. There is no need for the latest hardware or OS.
+
 ## Features
 
 * Add motion cues to your screen based on headphone motion
+* Works on macOS Sequoia (15)+ and Apple Silicon Macs (including M1)
 
 ## Installation
 
