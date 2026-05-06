@@ -71,17 +71,6 @@
         }
       }
     },
-    "Disable Motion" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Desabilitar Movimento"
-          }
-        }
-      }
-    },
     "Dot Style" : {
       "localizations" : {
         "pt-BR" : {
@@ -98,17 +87,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dinâmico"
-          }
-        }
-      }
-    },
-    "Enable Motion" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Habilitar Movimento"
           }
         }
       }
@@ -344,32 +322,10 @@
       }
     },
     "X:" : {
-
-    },
-    "X: %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "X: %@"
-          }
-        }
-      }
+      "shouldTranslate" : false
     },
     "Y:" : {
-
-    },
-    "Y: %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Y: %@"
-          }
-        }
-      }
+      "shouldTranslate" : false
     },
     "You may need to relaunch the app after granting access." : {
       "localizations" : {
