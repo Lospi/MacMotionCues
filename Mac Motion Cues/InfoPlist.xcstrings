@@ -43,6 +43,12 @@
       "comment" : "Privacy - Location Usage Description",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird verwendet, um Bewegungshinweise automatisch zu aktivieren, wenn du dich in einem fahrenden Fahrzeug befindest."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -61,6 +67,12 @@
       "comment" : "Privacy - Location When In Use Usage Description",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird verwendet, um Bewegungshinweise automatisch zu aktivieren, wenn du dich in einem fahrenden Fahrzeug befindest."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -78,6 +90,12 @@
     "NSMotionUsageDescription" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese App nutzt die Gerätebewegung, um Bewegungshinweise zu berechnen."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
