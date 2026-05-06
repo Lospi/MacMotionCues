@@ -7,17 +7,9 @@
 
 import SwiftUI
 
-struct Dot: Identifiable, Animatable {
+struct Dot: Identifiable {
     var id = UUID()
     var offsetY: CGFloat
     var offsetX: CGFloat = 0
     var size: CGFloat
-
-    var animatableData: AnimatablePair<CGFloat, CGFloat> {
-        get { AnimatablePair(offsetX, offsetY) }
-        set {
-            offsetX = newValue.first
-            offsetY = newValue.second
-        }
-    }
 }
