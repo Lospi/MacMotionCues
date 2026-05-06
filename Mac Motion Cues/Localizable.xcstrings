@@ -31,6 +31,16 @@
         }
       }
     },
+    "AirPods went to sleep" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AirPods entraram em modo de espera"
+          }
+        }
+      }
+    },
     "Check for Updates…" : {
       "localizations" : {
         "pt-BR" : {
@@ -41,7 +51,28 @@
         }
       }
     },
+    "Connecting…" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conectando…"
+          }
+        }
+      }
+    },
+    "Cues need Motion & Fitness to read AirPods movement." : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Os indicadores precisam de Movimento e Forma Física para ler o movimento dos AirPods."
+          }
+        }
+      }
+    },
     "Disable Motion" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pt-BR" : {
           "stringUnit" : {
@@ -72,6 +103,7 @@
       }
     },
     "Enable Motion" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pt-BR" : {
           "stringUnit" : {
@@ -101,6 +133,16 @@
         }
       }
     },
+    "Grant Motion Access" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conceder Acesso a Movimento"
+          }
+        }
+      }
+    },
     "Halo" : {
       "localizations" : {
         "pt-BR" : {
@@ -121,12 +163,42 @@
         }
       }
     },
+    "Looking for compatible AirPods…" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Procurando AirPods compatíveis…"
+          }
+        }
+      }
+    },
     "Mac Motion Cues" : {
       "localizations" : {
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mac Motion Cues"
+          }
+        }
+      }
+    },
+    "Mac Motion Cues uses AirPods head-tracking to drive cue motion." : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Mac Motion Cues usa o rastreamento de movimento da cabeça dos AirPods para gerar os indicadores."
+          }
+        }
+      }
+    },
+    "Motion access denied" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acesso a movimento negado"
           }
         }
       }
@@ -151,12 +223,42 @@
         }
       }
     },
+    "Move your head or take them out and put them back in to reconnect." : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mexa a cabeça ou tire e recoloque os AirPods para reconectar."
+          }
+        }
+      }
+    },
     "Off" : {
       "localizations" : {
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desligado"
+          }
+        }
+      }
+    },
+    "Open System Settings…" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir Ajustes do Sistema…"
+          }
+        }
+      }
+    },
+    "Put on your AirPods" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coloque seus AirPods"
           }
         }
       }
@@ -265,6 +367,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Y: %@"
+          }
+        }
+      }
+    },
+    "You may need to relaunch the app after granting access." : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Talvez seja necessário reabrir o app após conceder o acesso."
           }
         }
       }

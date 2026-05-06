@@ -4,10 +4,10 @@ import SwiftUI
 
 @main
 struct MacMotionCuesApp: App {
-    var motionViewModel = MotionViewModel.shared
+    private let motionViewModel = MotionViewModel.shared
+    private let appState = AppState.shared
+    private let overlay = OverlayWindowController()
     private let updaterController: SPUStandardUpdaterController
-    @State private var overlay = OverlayWindowController()
-    @AppStorage("appEnabled") private var appEnabled: Bool = true
 
     init() {
         updaterController = SPUStandardUpdaterController(
@@ -15,33 +15,27 @@ struct MacMotionCuesApp: App {
             updaterDelegate: nil,
             userDriverDelegate: nil
         )
+        // Defer to the next runloop tick so NSApp is fully up before we
+        // touch the headphone motion manager or create overlay windows.
+        DispatchQueue.main.async { [motionViewModel, overlay, appState] in
+            motionViewModel.bootstrap()
+            overlay.startObservingMountConditions(
+                appState: appState,
+                motionViewModel: motionViewModel
+            )
+        }
     }
 
     var body: some Scene {
         MenuBarExtra("Motion Cues", systemImage: "cursorarrow.motionlines.click") {
             MenuBar(
                 motionViewModel: motionViewModel,
+                appState: appState,
                 settings: DotsSettings.shared
             )
-            .task { syncOverlayMounting() }
-            .onChange(of: appEnabled) { _, newValue in
-                if !newValue && motionViewModel.isMotionEnabled {
-                    motionViewModel.stopDeviceMotion()
-                }
-                syncOverlayMounting()
-            }
-            .onChange(of: motionViewModel.isMotionEnabled) { syncOverlayMounting() }
         }
         .menuBarExtraStyle(.window)
 
         Settings { EmptyView() }
-    }
-
-    private func syncOverlayMounting() {
-        if appEnabled && motionViewModel.isMotionEnabled {
-            overlay.install()
-        } else {
-            overlay.uninstall()
-        }
     }
 }

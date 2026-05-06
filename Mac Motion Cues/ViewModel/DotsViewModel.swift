@@ -69,7 +69,7 @@ class DotsViewModel {
     }
 
     func updateDotsPosition() {
-        guard MotionViewModel.shared.isMotionEnabled else { return }
+        guard MotionViewModel.shared.isStreaming else { return }
 
         let settings = DotsSettings.shared
         let fixedDeltaTime: CGFloat = 1.0 / 60.0

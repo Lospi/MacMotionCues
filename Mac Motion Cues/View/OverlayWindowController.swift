@@ -12,6 +12,34 @@ final class OverlayWindowController {
     private var observer: NSObjectProtocol?
     private(set) var isInstalled = false
 
+    /// Drives `install()`/`uninstall()` reactively from `appState.appEnabled`
+    /// and `motionViewModel.state`, independent of any view's lifecycle.
+    /// Call once at app launch; re-arms itself after each mutation.
+    func startObservingMountConditions(appState: AppState, motionViewModel: MotionViewModel) {
+        observeMountConditions(appState: appState, motionViewModel: motionViewModel)
+    }
+
+    private func observeMountConditions(appState: AppState, motionViewModel: MotionViewModel) {
+        withObservationTracking {
+            _ = appState.appEnabled
+            _ = motionViewModel.state
+        } onChange: { [weak self] in
+            Task { @MainActor in
+                self?.applyMountState(appState: appState, motionViewModel: motionViewModel)
+                self?.observeMountConditions(appState: appState, motionViewModel: motionViewModel)
+            }
+        }
+        applyMountState(appState: appState, motionViewModel: motionViewModel)
+    }
+
+    private func applyMountState(appState: AppState, motionViewModel: MotionViewModel) {
+        if appState.appEnabled && motionViewModel.state == .streaming {
+            install()
+        } else {
+            uninstall()
+        }
+    }
+
     func install() {
         guard !isInstalled else { return }
         isInstalled = true

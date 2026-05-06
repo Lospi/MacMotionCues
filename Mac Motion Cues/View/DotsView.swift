@@ -11,7 +11,7 @@ struct DotsView: View {
     var body: some View {
         let settings = DotsSettings.shared
         GeometryReader { geometry in
-            TimelineView(.animation(minimumInterval: 1 / 30, paused: !motionViewModel.isMotionEnabled)) { context in
+            TimelineView(.animation(minimumInterval: 1 / 30, paused: !motionViewModel.isStreaming)) { context in
                 ZStack {
                     ForEach(dotsViewModel.dots.indices, id: \.self) { index in
                         let dot = dotsViewModel.dots[index]
