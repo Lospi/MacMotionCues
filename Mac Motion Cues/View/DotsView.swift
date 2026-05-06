@@ -8,6 +8,13 @@ struct DotsView: View {
     private let haloLineWidth: CGFloat = 1.5
     private let haloGap: CGFloat = 1.0
 
+    private func edgeFadeOpacity(y: CGFloat, height: CGFloat, fadeRange: CGFloat, inset: CGFloat) -> Double {
+        guard fadeRange > 0 else { return 1 }
+        let topRamp = max(0, min(1, (y - inset) / fadeRange))
+        let bottomRamp = max(0, min(1, (height - inset - y) / fadeRange))
+        return Double(min(topRamp, bottomRamp))
+    }
+
     var body: some View {
         let settings = DotsSettings.shared
         GeometryReader { geometry in
@@ -39,8 +46,7 @@ struct DotsView: View {
                                 : geometry.size.width - 150 + dot.offsetX,
                             y: dot.offsetY
                         )
-                        .opacity(dot.offsetY < DotsSettings.shared.dotSize ||
-                            dot.offsetY > geometry.size.height - 150 ? 0 : 1)
+                        .opacity(edgeFadeOpacity(y: dot.offsetY, height: geometry.size.height, fadeRange: dot.size * 2, inset: dot.size))
                     }
                 }
                 .onChange(of: context.date) {
