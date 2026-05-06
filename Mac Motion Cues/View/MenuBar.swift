@@ -132,10 +132,7 @@ struct MenuBar: View {
                                     .monospacedDigit()
                             }
 
-                            HStack {
-                                Text("X: \(String(format: "%.2f", motionViewModel.motionX))")
-                                Text("Y: \(String(format: "%.2f", motionViewModel.motionY))")
-                            }
+                            MotionReadout(motionViewModel: motionViewModel)
 
                             HStack {
                                 Toggle("Enable X Motion (BETA)", isOn: $settings.xMotionEnabled)
@@ -178,5 +175,26 @@ struct MenuBar: View {
         }
         .frame(width: 300)
         .padding(.vertical)
+    }
+}
+
+private struct MotionReadout: View {
+    @Bindable var motionViewModel: MotionViewModel
+
+    var body: some View {
+        HStack(spacing: 16) {
+            HStack(spacing: 4) {
+                Text("X:")
+                Text(String(format: "%.2f", motionViewModel.motionX))
+                    .monospacedDigit()
+                    .frame(width: 38, alignment: .trailing)
+            }
+            HStack(spacing: 4) {
+                Text("Y:")
+                Text(String(format: "%.2f", motionViewModel.motionY))
+                    .monospacedDigit()
+                    .frame(width: 38, alignment: .trailing)
+            }
+        }
     }
 }

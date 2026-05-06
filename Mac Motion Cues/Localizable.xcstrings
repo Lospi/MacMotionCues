@@ -221,9 +221,6 @@
         }
       }
     },
-    "Style" : {
-
-    },
     "View Source Code" : {
       "localizations" : {
         "pt-BR" : {
@@ -244,7 +241,11 @@
         }
       }
     },
+    "X:" : {
+
+    },
     "X: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pt-BR" : {
           "stringUnit" : {
@@ -254,7 +255,11 @@
         }
       }
     },
+    "Y:" : {
+
+    },
     "Y: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pt-BR" : {
           "stringUnit" : {
