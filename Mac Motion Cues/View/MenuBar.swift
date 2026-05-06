@@ -7,8 +7,6 @@ struct MenuBar: View {
     @Bindable var settings: DotsSettings
     let overlay: OverlayWindowController
     @AppStorage("appEnabled") private var appEnabled: Bool = true
-    @AppStorage("dotStyle") private var dotStyle: DotStyle = .dynamic
-    @AppStorage("haloStyle") private var haloStyle: HaloStyle = .dynamic
 
     var body: some View {
         VStack(alignment: .center, spacing: 15) {
@@ -70,7 +68,7 @@ struct MenuBar: View {
                         HStack {
                             Text("Style")
                                 .frame(width: 50, alignment: .leading)
-                            Picker("Style", selection: $dotStyle) {
+                            Picker("Style", selection: $settings.dotStyle) {
                                 Text("Solid").tag(DotStyle.solid)
                                 Text("Dynamic").tag(DotStyle.dynamic)
                             }
@@ -81,7 +79,7 @@ struct MenuBar: View {
                         HStack {
                             Text("Halo")
                                 .frame(width: 50, alignment: .leading)
-                            Picker("Halo", selection: $haloStyle) {
+                            Picker("Halo", selection: $settings.haloStyle) {
                                 Text("Off").tag(HaloStyle.off)
                                 Text("Solid").tag(HaloStyle.solid)
                                 Text("Dynamic").tag(HaloStyle.dynamic)

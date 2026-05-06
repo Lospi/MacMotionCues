@@ -5,9 +5,7 @@ class MotionViewModel {
     var isMotionEnabled: Bool = false
     var motionX: Double = 0.0
     var motionY: Double = 0.0
-    
-    var motionSensitivity: Double = 1.0
-    
+
     static let shared = MotionViewModel()
     
     private var motion = CMHeadphoneMotionManager()

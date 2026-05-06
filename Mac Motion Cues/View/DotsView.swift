@@ -1,27 +1,15 @@
 import AppKit
 import SwiftUI
 
-enum DotStyle: String, CaseIterable {
-    case solid
-    case dynamic
-}
-
-enum HaloStyle: String, CaseIterable {
-    case off
-    case solid
-    case dynamic
-}
-
 struct DotsView: View {
     @Bindable var dotsViewModel: DotsViewModel
     @Bindable var motionViewModel: MotionViewModel
-    @AppStorage("dotStyle") private var dotStyle: DotStyle = .dynamic
-    @AppStorage("haloStyle") private var haloStyle: HaloStyle = .dynamic
 
     private let haloLineWidth: CGFloat = 1.5
     private let haloGap: CGFloat = 1.0
 
     var body: some View {
+        let settings = DotsSettings.shared
         GeometryReader { geometry in
             TimelineView(.animation(minimumInterval: 1 / 30, paused: !motionViewModel.isMotionEnabled)) { context in
                 ZStack {
@@ -29,18 +17,18 @@ struct DotsView: View {
                         let dot = dotsViewModel.dots[index]
                         ZStack {
                             Group {
-                                if dotStyle == .solid {
+                                if settings.dotStyle == .solid {
                                     Circle().fill(.black)
                                 } else {
                                     VibrantCircle()
                                 }
                             }
-                            .padding(haloStyle != .off ? haloLineWidth + haloGap : 0)
+                            .padding(settings.haloStyle != .off ? haloLineWidth + haloGap : 0)
 
-                            if haloStyle == .solid {
+                            if settings.haloStyle == .solid {
                                 Circle().strokeBorder(Color.black.opacity(0.5), lineWidth: haloLineWidth)
                             }
-                            if haloStyle == .dynamic {
+                            if settings.haloStyle == .dynamic {
                                 VibrantRing(lineWidth: haloLineWidth)
                             }
                         }
