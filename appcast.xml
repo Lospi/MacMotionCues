@@ -8,7 +8,7 @@
             <sparkle:version>1</sparkle:version>
             <sparkle:shortVersionString>0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/Lospi/OuterSpaces/releases/download/v0.1/OuterSpaces.dmg" length="2924326" type="application/octet-stream" sparkle:edSignature="xDsrA8YLeuQJ0Tl/2HiMz+/2dpXHGdE/VbA+aNMLlCyBkWq2EBtwE9+k0ce/ijaDQgEFyNjSdLxtmm6qkuNnCg=="/>
+            <enclosure url="https://github.com/Lospi/MacMotionCues/releases/download/v0.1/MacMotionCues.dmg" length="2924326" type="application/octet-stream" sparkle:edSignature="xDsrA8YLeuQJ0Tl/2HiMz+/2dpXHGdE/VbA+aNMLlCyBkWq2EBtwE9+k0ce/ijaDQgEFyNjSdLxtmm6qkuNnCg=="/>
         </item>
     </channel>
 </rss>
