@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0799051B2DA74DBD0029D42F /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 0799051A2DA74DBD0029D42F /* Sparkle */; };
-		0799051D2DA85F6B0029D42F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0799051C2DA85F6B0029D42F /* Localizable.xcstrings */; };
 		0799052F2DA860F00029D42F /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905202DA860F00029D42F /* Dot.swift */; };
 		079905302DA860F00029D42F /* DotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905242DA860F00029D42F /* DotsView.swift */; };
 		079905312DA860F00029D42F /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079905252DA860F00029D42F /* MenuBar.swift */; };
@@ -31,7 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0799051C2DA85F6B0029D42F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = "Mac Motion Cues/Localizable.xcstrings"; sourceTree = "<group>"; };
 		079905202DA860F00029D42F /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		079905222DA860F00029D42F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		079905242DA860F00029D42F /* DotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsView.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 		07AEFBD42CF00D44001A9095 = {
 			isa = PBXGroup;
 			children = (
-				0799051C2DA85F6B0029D42F /* Localizable.xcstrings */,
 				0799052E2DA860F00029D42F /* Mac Motion Cues */,
 				07AEFBDE2CF00D44001A9095 /* Products */,
 			);
@@ -233,7 +230,6 @@
 				7C06465E2FAB608C000B6D48 /* InfoPlist.xcstrings in Resources */,
 				079905362DA860F00029D42F /* Assets.xcassets in Resources */,
 				079905372DA860F00029D42F /* Localizable.xcstrings in Resources */,
-				0799051D2DA85F6B0029D42F /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
