@@ -3,12 +3,22 @@
     <channel>
         <title>Mac Motion Cues</title>
         <item>
-            <title>0.1</title>
-            <pubDate>Thu, 10 Apr 2025 19:07:53 -0300</pubDate>
-            <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>0.1</sparkle:shortVersionString>
+            <title>0.2</title>
+            <pubDate>Thu, 07 May 2026 10:35:57 -0300</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>0.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/Lospi/MacMotionCues/releases/download/v0.1/MacMotionCues.dmg" length="2924326" type="application/octet-stream" sparkle:edSignature="xDsrA8YLeuQJ0Tl/2HiMz+/2dpXHGdE/VbA+aNMLlCyBkWq2EBtwE9+k0ce/ijaDQgEFyNjSdLxtmm6qkuNnCg=="/>
+            <description><![CDATA[<h2>Mac Motion Cues 0.2</h2>
+<ul>
+  <li>Adds multi-display and multi-Space motion cue support.</li>
+  <li>Adds persisted dot and halo style settings.</li>
+  <li>Adds reactive AirPods motion state and clearer onboarding states.</li>
+  <li>Adds optional vehicle detection with CoreLocation.</li>
+  <li>Adds German localization and consolidates app strings.</li>
+  <li>Improves dot rendering performance and memory behavior.</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/Lospi/MacMotionCues/releases/download/v0.2/MacMotionCues.dmg" length="3051469" type="application/octet-stream" sparkle:edSignature="LEZSXuDZcRCN8Jct3oZkeKTMXqbZN7OHY5u1XE6dQMny6cZ6ZTCOw5+3StIBxxz3V45a/RlXheH1Eetr22obDQ=="/>
         </item>
     </channel>
 </rss>
