@@ -31,7 +31,8 @@ struct MacMotionCuesApp: App {
             MenuBar(
                 pipeline: pipeline,
                 appState: appState,
-                settings: DotsSettings.shared
+                settings: DotsSettings.shared,
+                updater: updaterController.updater
             )
         }
         .menuBarExtraStyle(.window)

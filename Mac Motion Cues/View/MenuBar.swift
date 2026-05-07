@@ -6,6 +6,7 @@ struct MenuBar: View {
     @Bindable var pipeline: MotionPipeline
     @Bindable var appState: AppState
     @Bindable var settings: DotsSettings
+    let updater: SPUUpdater
 
     var body: some View {
         VStack(alignment: .center, spacing: 15) {
@@ -115,7 +116,7 @@ struct MenuBar: View {
             LaunchAtLogin.Toggle {
                 Text("Launch at Login")
             }
-            UpdateView()
+            UpdateView(updater: updater)
 
             Button("Quit Mac Motion Cues") {
                 NSApplication.shared.terminate(nil)
