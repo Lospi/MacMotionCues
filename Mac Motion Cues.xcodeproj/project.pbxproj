@@ -102,17 +102,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		0799FE0B2E0000000029D42F /* Motion */ = {
-			isa = PBXGroup;
-			children = (
-				0799FE082E0000000029D42F /* MotionSource.swift */,
-				0799FE0A2E0000000029D42F /* AirPodsMotionSource.swift */,
-				0799FE0F2E0000000029D42F /* CoreLocationDetectionSource.swift */,
-				0799FE0D2E0000000029D42F /* MotionPipeline.swift */,
-			);
-			path = Motion;
-			sourceTree = "<group>";
-		};
 		0799052E2DA860F00029D42F /* Mac Motion Cues */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +128,17 @@
 				079905392DA860FA0029D42F /* SparkleUpdater.swift */,
 			);
 			path = Sparkle;
+			sourceTree = "<group>";
+		};
+		0799FE0B2E0000000029D42F /* Motion */ = {
+			isa = PBXGroup;
+			children = (
+				0799FE082E0000000029D42F /* MotionSource.swift */,
+				0799FE0A2E0000000029D42F /* AirPodsMotionSource.swift */,
+				0799FE0F2E0000000029D42F /* CoreLocationDetectionSource.swift */,
+				0799FE0D2E0000000029D42F /* MotionPipeline.swift */,
+			);
+			path = Motion;
 			sourceTree = "<group>";
 		};
 		07AEFBD42CF00D44001A9095 = {
@@ -395,6 +395,7 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mac Motion Cues/Preview Content\"";
+				DEVELOPMENT_TEAM = JFM39N7Z6U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -425,6 +426,7 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mac Motion Cues/Preview Content\"";
+				DEVELOPMENT_TEAM = JFM39N7Z6U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

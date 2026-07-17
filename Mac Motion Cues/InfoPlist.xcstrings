@@ -58,6 +58,12 @@
             "state" : "translated",
             "value" : "Usado para ativar automaticamente os indicadores de movimento quando você está em um veículo em movimento."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이동 중인 차량에 있을 때 모션 큐를 자동으로 활성화하는 데 사용됩니다."
+          }
         }
       }
     },
@@ -82,6 +88,12 @@
             "state" : "translated",
             "value" : "Usado para ativar automaticamente os indicadores de movimento quando você está em um veículo em movimento."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이동 중인 차량에 있을 때 모션 큐를 자동으로 활성화하는 데 사용됩니다."
+          }
         }
       }
     },
@@ -104,6 +116,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Este app usa o movimento do dispositivo para calcular os indicadores de movimento."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 앱은 기기 움직임을 사용해 모션 큐를 계산합니다."
           }
         }
       }
