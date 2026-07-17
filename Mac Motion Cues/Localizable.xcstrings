@@ -14,6 +14,12 @@
             "state" : "translated",
             "value" : "%lld"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
         }
       }
     },
@@ -30,6 +36,12 @@
             "state" : "translated",
             "value" : "Sobre"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정보"
+          }
         }
       }
     },
@@ -43,6 +55,12 @@
           }
         },
         "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AirPods"
+          }
+        },
+        "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "AirPods"
@@ -63,6 +81,12 @@
             "state" : "translated",
             "value" : "AirPods conectado"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AirPods 연결됨"
+          }
         }
       }
     },
@@ -78,6 +102,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "AirPods entraram em modo de espera"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AirPods가 잠자기 상태로 전환됨"
           }
         }
       }
@@ -95,6 +125,12 @@
             "state" : "translated",
             "value" : "Solicitando permissão de localização…"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치 권한 요청 중…"
+          }
         }
       }
     },
@@ -110,6 +146,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ativar automaticamente em veículos"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 탑승 시 자동 활성화"
           }
         }
       }
@@ -127,6 +169,12 @@
             "state" : "translated",
             "value" : "Verificar por atualizações..."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업데이트 확인…"
+          }
         }
       }
     },
@@ -142,6 +190,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Conectando…"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연결 중…"
           }
         }
       }
@@ -159,6 +213,12 @@
             "state" : "translated",
             "value" : "Os indicadores precisam de Movimento e Forma Física para ler o movimento dos AirPods."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AirPods 움직임을 읽으려면 동작 및 피트니스 권한이 필요합니다."
+          }
         }
       }
     },
@@ -174,6 +234,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estilo do Ponto"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "점 스타일"
           }
         }
       }
@@ -191,6 +257,12 @@
             "state" : "translated",
             "value" : "Dinâmico"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "동적"
+          }
         }
       }
     },
@@ -206,6 +278,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Habilitar Indicador de Movimento"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시각적 큐 활성화"
           }
         }
       }
@@ -223,6 +301,12 @@
             "state" : "translated",
             "value" : "Habilitar Movimento Horizontal (BETA)"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "X축 움직임 활성화(베타)"
+          }
         }
       }
     },
@@ -238,6 +322,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Conceder Acesso a Movimento"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "동작 접근 허용"
           }
         }
       }
@@ -255,6 +345,12 @@
             "state" : "translated",
             "value" : "Halo"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "후광"
+          }
         }
       }
     },
@@ -270,6 +366,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Em veículo"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 탑승 중"
           }
         }
       }
@@ -287,6 +389,12 @@
             "state" : "translated",
             "value" : "Abrir ao Iniciar"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로그인 시 실행"
+          }
         }
       }
     },
@@ -302,6 +410,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acesso à localização negado"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치 접근이 거부됨"
           }
         }
       }
@@ -320,6 +434,12 @@
             "state" : "translated",
             "value" : "Serviços de localização"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치 서비스"
+          }
         }
       }
     },
@@ -336,6 +456,12 @@
             "state" : "translated",
             "value" : "Procurando AirPods compatíveis…"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호환되는 AirPods 찾는 중…"
+          }
         }
       }
     },
@@ -348,6 +474,12 @@
           }
         },
         "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac Motion Cues"
+          }
+        },
+        "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mac Motion Cues"
@@ -369,6 +501,12 @@
             "state" : "translated",
             "value" : "O Mac Motion Cues usa o rastreamento de movimento da cabeça dos AirPods para gerar os indicadores."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac Motion Cues는 AirPods 머리 추적을 사용해 큐 움직임을 구동합니다."
+          }
         }
       }
     },
@@ -384,6 +522,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acesso a movimento negado"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "동작 접근이 거부됨"
           }
         }
       }
@@ -401,6 +545,12 @@
             "state" : "translated",
             "value" : "Indicadores de Movimento"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모션 큐"
+          }
         }
       }
     },
@@ -416,6 +566,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Configurações de Movimento"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "동작 설정"
           }
         }
       }
@@ -433,6 +589,12 @@
             "state" : "translated",
             "value" : "Mexa a cabeça ou tire e recoloque os AirPods para reconectar."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 연결하려면 머리를 움직이거나 AirPods를 뺐다가 다시 착용하세요."
+          }
         }
       }
     },
@@ -449,6 +611,12 @@
             "state" : "translated",
             "value" : "Desligado"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "끔"
+          }
         }
       }
     },
@@ -464,6 +632,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abrir Ajustes do Sistema…"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시스템 설정 열기…"
           }
         }
       }
@@ -482,6 +656,12 @@
             "state" : "translated",
             "value" : "Coloque seus AirPods"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AirPods를 착용하세요"
+          }
         }
       }
     },
@@ -497,6 +677,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sair de Mac Motion Cues"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac Motion Cues 종료"
           }
         }
       }
@@ -514,6 +700,12 @@
             "state" : "translated",
             "value" : "Sensibilidade"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "민감도"
+          }
         }
       }
     },
@@ -529,6 +721,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Configurando…"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정 중…"
           }
         }
       }
@@ -546,6 +744,12 @@
             "state" : "translated",
             "value" : "Tamanho"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "크기"
+          }
         }
       }
     },
@@ -561,6 +765,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sólido"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단색"
           }
         }
       }
@@ -578,6 +788,12 @@
             "state" : "translated",
             "value" : "Espaçamento"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "간격"
+          }
         }
       }
     },
@@ -593,6 +809,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Parado"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정지 상태"
           }
         }
       }
@@ -610,6 +832,12 @@
             "state" : "translated",
             "value" : "Estilo"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스타일"
+          }
         }
       }
     },
@@ -625,6 +853,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usa o rastreamento de movimento dos AirPods para gerar os indicadores."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AirPods 머리 추적을 사용해 큐 움직임을 구동합니다."
           }
         }
       }
@@ -642,6 +876,12 @@
             "state" : "translated",
             "value" : "Ver Código Fonte"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소스 코드 보기"
+          }
         }
       }
     },
@@ -657,6 +897,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Configurações Visuais"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시각 설정"
           }
         }
       }
@@ -679,6 +925,210 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Talvez seja necessário reabrir o app após conceder o acesso."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "접근을 허용한 후 앱을 다시 실행해야 할 수 있습니다."
+          }
+        }
+      }
+    },
+    "Bubble Threshold" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blasen-Schwelle"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Limiar das Bolhas"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버블 임계값"
+          }
+        }
+      }
+    },
+    "Color" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Farbe"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cor"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "색상"
+          }
+        }
+      }
+    },
+    "Grayscale" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Graustufen"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tons de cinza"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "그레이스케일"
+          }
+        }
+      }
+    },
+    "Blue" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blau"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Azul"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "파란색"
+          }
+        }
+      }
+    },
+    "Green" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grün"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verde"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "녹색"
+          }
+        }
+      }
+    },
+    "Yellow" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelb"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amarelo"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "노란색"
+          }
+        }
+      }
+    },
+    "Orange" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orange"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laranja"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주황색"
+          }
+        }
+      }
+    },
+    "Red" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rot"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vermelho"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빨간색"
+          }
+        }
+      }
+    },
+    "Purple" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lila"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Roxo"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보라색"
           }
         }
       }

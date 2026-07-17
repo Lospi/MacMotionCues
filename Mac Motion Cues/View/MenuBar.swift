@@ -79,6 +79,24 @@ struct MenuBar: View {
                         .pickerStyle(.segmented)
                         .labelsHidden()
                     }
+
+                    HStack {
+                        Text("Color")
+                            .frame(width: 50, alignment: .leading)
+                        Picker("Color", selection: $settings.dotColor) {
+                            ForEach(DotColorOption.allCases) { option in
+                                Label {
+                                    Text(option.displayName)
+                                } icon: {
+                                    Circle()
+                                        .fill(option.tint ?? Color.primary)
+                                        .frame(width: 10, height: 10)
+                                }
+                                .tag(option)
+                            }
+                        }
+                        .labelsHidden()
+                    }
                 }
             }
             .padding(.horizontal)
@@ -174,6 +192,14 @@ private struct MotionStatusPanel: View {
                 Text("Sensitivity")
                 Slider(value: $settings.motionSensitivity, in: 1...20, step: 1)
                 Text("\(Int(settings.motionSensitivity))")
+                    .frame(width: 40, alignment: .trailing)
+                    .monospacedDigit()
+            }
+
+            HStack {
+                Text("Bubble Threshold")
+                Slider(value: $settings.bubbleThreshold, in: 0.01...0.12, step: 0.005)
+                Text(String(format: "%.3f", settings.bubbleThreshold))
                     .frame(width: 40, alignment: .trailing)
                     .monospacedDigit()
             }

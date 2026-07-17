@@ -20,16 +20,22 @@ struct DotsView: View {
         GeometryReader { geometry in
             TimelineView(.animation(minimumInterval: 1 / 30, paused: !pipeline.isStreaming)) { context in
                 ZStack {
+                    ForEach(dotsViewModel.bubbles) { bubble in
+                        CueMark(style: settings.dotStyle, color: settings.dotColor, opacity: settings.dotStyle == .solid ? 0.35 : 1)
+                        .frame(width: bubble.renderedSize, height: bubble.renderedSize)
+                        .position(x: bubble.x, y: bubble.y)
+                        .opacity(bubble.opacity * edgeFadeOpacity(
+                            y: bubble.y,
+                            height: geometry.size.height,
+                            fadeRange: bubble.renderedSize * 2,
+                            inset: bubble.renderedSize
+                        ))
+                    }
+
                     ForEach(dotsViewModel.dots.indices, id: \.self) { index in
                         let dot = dotsViewModel.dots[index]
                         ZStack {
-                            Group {
-                                if settings.dotStyle == .solid {
-                                    Circle().fill(.black)
-                                } else {
-                                    VibrantCircle()
-                                }
-                            }
+                            CueMark(style: settings.dotStyle, color: settings.dotColor)
                             .padding(settings.haloStyle != .off ? haloLineWidth + haloGap : 0)
 
                             if settings.haloStyle == .solid {
@@ -41,23 +47,51 @@ struct DotsView: View {
                         }
                         .frame(width: dot.size, height: dot.size)
                         .position(
-                            x: index % 2 == 0
-                                ? 150 + dot.offsetX
-                                : geometry.size.width - 150 + dot.offsetX,
-                            y: dot.offsetY
+                            x: dot.anchorX + dot.offsetX,
+                            y: dot.anchorY + dot.offsetY
                         )
-                        .opacity(edgeFadeOpacity(y: dot.offsetY, height: geometry.size.height, fadeRange: dot.size * 2, inset: dot.size))
+                        .opacity(edgeFadeOpacity(y: dot.anchorY + dot.offsetY, height: geometry.size.height, fadeRange: dot.size * 2, inset: dot.size))
                     }
                 }
                 .onChange(of: context.date) {
-                    dotsViewModel.updateDotsPosition()
+                    dotsViewModel.updateDotsPosition(screenWidth: geometry.size.width)
                 }
                 .onAppear {
-                    dotsViewModel.initializeDots(screenHeight: geometry.size.height)
+                    dotsViewModel.initializeDots(screenHeight: geometry.size.height, screenWidth: geometry.size.width)
                 }
                 .onChange(of: geometry.size.height) {
-                    dotsViewModel.initializeDots(screenHeight: geometry.size.height)
+                    dotsViewModel.initializeDots(screenHeight: geometry.size.height, screenWidth: geometry.size.width)
                 }
+                .onChange(of: geometry.size.width) {
+                    dotsViewModel.updateScreenSize(width: geometry.size.width, height: geometry.size.height)
+                }
+            }
+        }
+    }
+}
+
+/// Renders a single cue mark (dot or bubble): a flat fill for `.solid`, or a
+/// vibrant blur tinted with `color` (skipped for `.grayscale`) for `.dynamic`.
+///
+/// A faint stroke + shadow is always applied (independent of the optional
+/// `HaloStyle` ring) so the mark keeps a visible edge against backgrounds
+/// close to its own tone, rather than relying solely on vibrancy.
+struct CueMark: View {
+    let style: DotStyle
+    let color: DotColorOption
+    var opacity: Double = 1
+
+    var body: some View {
+        Group {
+            if style == .solid {
+                Circle().fill((color.tint ?? .black).opacity(opacity))
+            } else {
+                VibrantCircle()
+                    .overlay {
+                        if let tint = color.tint {
+                            Circle().fill(tint.opacity(0.5 * opacity))
+                        }
+                    }
             }
         }
     }
