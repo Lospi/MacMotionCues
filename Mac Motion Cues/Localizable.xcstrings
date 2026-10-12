@@ -17,6 +17,70 @@
         }
       }
     },
+    "**Automatic** keeps the standard look: black for Solid, clear glass for Dynamic. A color fills a Solid dot and adds a light wash to a Dynamic one." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Automatisch** behält das Standardaussehen bei: Schwarz bei „Solide“, klares Glas bei „Dynamisch“. Eine Farbe füllt einen soliden Punkt und tönt einen dynamischen leicht ein."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Automático** mantém a aparência padrão: preto no estilo Sólido, vidro transparente no Dinâmico. Uma cor preenche o ponto Sólido e dá um leve tom ao Dinâmico."
+          }
+        }
+      }
+    },
+    "**Sensitivity:** how far the dots move for a given motion. Higher means stronger reactions.\n**X Motion:** also moves the dots sideways when the vehicle turns. It's in beta because turning your head can move the dots too." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Empfindlichkeit:** wie weit sich die Punkte bei einer Bewegung verschieben. Höhere Werte bedeuten stärkere Reaktionen.\n**X-Bewegung:** bewegt die Punkte zusätzlich seitwärts, wenn das Fahrzeug abbiegt. Noch in Beta, weil auch Kopfdrehungen die Punkte bewegen können."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Sensibilidade:** quanto os pontos se movem para um determinado movimento. Valores maiores geram reações mais fortes.\n**Movimento Horizontal:** também move os pontos para os lados quando o veículo faz curvas. Está em beta porque virar a cabeça também pode mover os pontos."
+          }
+        }
+      }
+    },
+    "**Solid:** a plain dot in your chosen tint.\n**Dynamic:** a frosted-glass dot that blurs what's behind it and adapts to light and dark content." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Solide:** ein einfacher Punkt in der gewählten Farbe.\n**Dynamisch:** ein Milchglas-Punkt, der den Hintergrund weichzeichnet und sich an helle und dunkle Inhalte anpasst."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Sólido:** um ponto simples na cor escolhida.\n**Dinâmico:** um ponto de vidro fosco que desfoca o que está atrás e se adapta a conteúdos claros e escuros."
+          }
+        }
+      }
+    },
+    "A thin ring around each dot that makes it easier to spot on busy backgrounds.\n**Solid:** a ring in your halo tint.\n**Dynamic:** a frosted ring that adapts to the background." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein dünner Ring um jeden Punkt, der ihn auf unruhigen Hintergründen leichter erkennbar macht.\n**Solide:** ein Ring in der Halofarbe.\n**Dynamisch:** ein Milchglas-Ring, der sich an den Hintergrund anpasst."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um anel fino ao redor de cada ponto que facilita vê-lo em fundos carregados.\n**Sólido:** um anel na cor do halo.\n**Dinâmico:** um anel de vidro fosco que se adapta ao fundo."
+          }
+        }
+      }
+    },
     "About" : {
       "localizations" : {
         "de" : {
@@ -114,6 +178,54 @@
         }
       }
     },
+    "Automatic" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisch"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automático"
+          }
+        }
+      }
+    },
+    "Black" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwarz"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preto"
+          }
+        }
+      }
+    },
+    "Blue" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blau"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Azul"
+          }
+        }
+      }
+    },
     "Check for Updates…" : {
       "localizations" : {
         "de" : {
@@ -162,6 +274,38 @@
         }
       }
     },
+    "Custom Color…" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eigene Farbe…"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cor personalizada…"
+          }
+        }
+      }
+    },
+    "Dot Opacity" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deckkraft des Punkts"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opacidade do ponto"
+          }
+        }
+      }
+    },
     "Dot Style" : {
       "localizations" : {
         "de" : {
@@ -174,6 +318,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estilo do Ponto"
+          }
+        }
+      }
+    },
+    "Dot Tint" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punktfarbe"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cor do ponto"
           }
         }
       }
@@ -242,6 +402,22 @@
         }
       }
     },
+    "Green" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grün"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verde"
+          }
+        }
+      }
+    },
     "Halo" : {
       "localizations" : {
         "de" : {
@@ -254,6 +430,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Halo"
+          }
+        }
+      }
+    },
+    "Halo Opacity" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deckkraft des Halos"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opacidade do halo"
+          }
+        }
+      }
+    },
+    "Halo Tint" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Halofarbe"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cor do halo"
           }
         }
       }
@@ -372,6 +580,22 @@
         }
       }
     },
+    "More info about %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mehr Infos zu %@"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mais informações sobre %@"
+          }
+        }
+      }
+    },
     "Motion access denied" : {
       "localizations" : {
         "de" : {
@@ -436,6 +660,22 @@
         }
       }
     },
+    "Moves the dots using the motion sensors in compatible AirPods (Pro, Max, or 3rd generation and later), so they must be worn for the cues to work." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewegt die Punkte mithilfe der Bewegungssensoren kompatibler AirPods (Pro, Max oder ab der 3. Generation). Du musst sie daher tragen, damit die Hinweise funktionieren."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Move os pontos usando os sensores de movimento de AirPods compatíveis (Pro, Max ou 3ª geração e posteriores), por isso é preciso usá-los para que os indicadores funcionem."
+          }
+        }
+      }
+    },
     "Off" : {
       "localizations" : {
         "de" : {
@@ -452,6 +692,22 @@
         }
       }
     },
+    "Opacity" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deckkraft"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opacidade"
+          }
+        }
+      }
+    },
     "Open System Settings…" : {
       "localizations" : {
         "de" : {
@@ -464,6 +720,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abrir Ajustes do Sistema…"
+          }
+        }
+      }
+    },
+    "Orange" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orange"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laranja"
           }
         }
       }
@@ -501,6 +773,22 @@
         }
       }
     },
+    "Red" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rot"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vermelho"
+          }
+        }
+      }
+    },
     "Sensitivity" : {
       "localizations" : {
         "de" : {
@@ -529,6 +817,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Configurando…"
+          }
+        }
+      }
+    },
+    "Shows cues only while you're traveling at vehicle speed, and hides them again shortly after you stop." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeigt die Hinweise nur, während du mit Fahrzeuggeschwindigkeit unterwegs bist, und blendet sie kurz nach dem Anhalten wieder aus."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostra os indicadores apenas enquanto você se desloca em velocidade de veículo e os oculta pouco depois que você para."
           }
         }
       }
@@ -613,6 +917,22 @@
         }
       }
     },
+    "Tint" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Farbe"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cor"
+          }
+        }
+      }
+    },
     "Uses AirPods head-tracking to drive cue motion." : {
       "localizations" : {
         "de" : {
@@ -657,6 +977,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Configurações Visuais"
+          }
+        }
+      }
+    },
+    "White" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiß"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branco"
           }
         }
       }

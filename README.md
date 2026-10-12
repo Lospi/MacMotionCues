@@ -28,6 +28,8 @@ Mac Motion Cues is a macOS app that enables motion cue dots on your screen to he
 ## Features
 
 * Add motion cues to your screen based on headphone motion
+* Customize the dots: size, spacing, style, halo, tint and opacity
+* Optionally show cues only while you're in a vehicle (uses Location Services)
 * Works on macOS Sequoia (15)+ and Apple Silicon Macs (including M1)
 
 ## Installation
@@ -38,13 +40,13 @@ Just drag the .app to the Application folder using the .dmg file.
 ## How to Use
 
 * Open the app on the menu bar
-* Enable Motion Cues
+* Enable Visual Cues
 * Connect your AirPods (if not yet connected)
-* Click on Enable Motion
+* Click on Grant Motion Access (first time only)
 
 ## Permission Request
 
-Outer Spaces requires permission for: Motion and Fitness. Make sure to enable both permissions within Privacy and Security on your macOS settings.
+Mac Motion Cues requires permission for Motion & Fitness. If you turn on auto-enable when in vehicle, it also asks for Location Services. You can manage both within Privacy & Security on your macOS settings.
 
 ## Contributing
 
@@ -52,9 +54,9 @@ Feel free to share, open issues and contribute to this project! ❤️
 
 ## Languages
 
-🇺🇸 English • 🇧🇷 Brazilian Portuguese
+🇺🇸 English • 🇧🇷 Brazilian Portuguese • 🇩🇪 German
 
-1.  Add a new Localization with Outer Spaces project Info settings
+1.  Add a new Localization with Mac Motion Cues project Info settings
 2.  Edit the **Localizable**  file with the proper translations
 
 ## Acknowledgement

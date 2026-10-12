@@ -7,6 +7,8 @@ struct DotsView: View {
 
     private let haloLineWidth: CGFloat = 1.5
     private let haloGap: CGFloat = 1.0
+    /// Strength of the tint wash laid over the vibrant (dynamic) dot and halo.
+    private let dynamicTintOpacity: Double = 0.35
 
     private func edgeFadeOpacity(y: CGFloat, height: CGFloat, fadeRange: CGFloat, inset: CGFloat) -> Double {
         guard fadeRange > 0 else { return 1 }
@@ -17,6 +19,15 @@ struct DotsView: View {
 
     var body: some View {
         let settings = DotsSettings.shared
+        // Resolved once per body pass, not per dot / per frame. nil = automatic.
+        let dotTint = settings.dotTintColor
+        let haloTint = settings.haloTintColor
+        let solidDotColor = dotTint ?? .black
+        let solidHaloColor = haloTint ?? Color.black.opacity(0.5)
+        let dynamicDotTint = dotTint?.opacity(dynamicTintOpacity)
+        let dynamicHaloTint = haloTint?.opacity(dynamicTintOpacity)
+        let dotOpacity = settings.dotOpacity
+        let haloOpacity = settings.haloOpacity
         GeometryReader { geometry in
             TimelineView(.animation(minimumInterval: 1 / 30, paused: !pipeline.isStreaming)) { context in
                 ZStack {
@@ -25,18 +36,31 @@ struct DotsView: View {
                         ZStack {
                             Group {
                                 if settings.dotStyle == .solid {
-                                    Circle().fill(.black)
+                                    Circle().fill(solidDotColor)
                                 } else {
                                     VibrantCircle()
+                                        .overlay {
+                                            if let dynamicDotTint {
+                                                Circle().fill(dynamicDotTint)
+                                            }
+                                        }
                                 }
                             }
                             .padding(settings.haloStyle != .off ? haloLineWidth + haloGap : 0)
+                            .opacity(dotOpacity)
 
                             if settings.haloStyle == .solid {
-                                Circle().strokeBorder(Color.black.opacity(0.5), lineWidth: haloLineWidth)
+                                Circle().strokeBorder(solidHaloColor, lineWidth: haloLineWidth)
+                                    .opacity(haloOpacity)
                             }
                             if settings.haloStyle == .dynamic {
                                 VibrantRing(lineWidth: haloLineWidth)
+                                    .overlay {
+                                        if let dynamicHaloTint {
+                                            Circle().strokeBorder(dynamicHaloTint, lineWidth: haloLineWidth)
+                                        }
+                                    }
+                                    .opacity(haloOpacity)
                             }
                         }
                         .frame(width: dot.size, height: dot.size)
